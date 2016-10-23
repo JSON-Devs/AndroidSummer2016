@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="jasongagnon.androidfinal.MainActivity"
+    tools:showIn="@layout/activity_main">
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/bg"
+        android:scaleType = "centerCrop" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Play"
+            android:id="@+id/btnPlay"
+            android:layout_above="@+id/btnOptions"
+            android:layout_centerHorizontal="true"
+            android:shadowColor="@color/shadow"
+            android:singleLine="false" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Options"
+            android:id="@+id/btnOptions"
+            android:layout_marginBottom="223dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignLeft="@+id/btnPlay"
+            android:layout_alignStart="@+id/btnPlay"
+            android:shadowColor="@color/shadow" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="THE MAZE CRAZE"
+            android:id="@+id/txtTitle"
+            android:layout_marginTop="58dp"
+            android:textIsSelectable="false"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Leaderboards"
+            android:id="@+id/btnLeaderboards"
+            android:layout_marginTop="49dp"
+            android:layout_alignTop="@+id/btnOptions"
+            android:layout_centerHorizontal="true" />
+
+    </RelativeLayout>
+
+</FrameLayout>

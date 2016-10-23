@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="jasongagnon.androidfinal.Maze"
+    tools:showIn="@layout/activity_maze">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black">
+
+        <jasongagnon.androidfinal.LevelView
+            android:id="@+id/level_1"
+            android:layout_width="1000dp"
+            android:layout_height="3000dp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="&lt;"
+            android:id="@+id/btnLeft"
+            android:layout_marginLeft="43dp"
+            android:layout_marginStart="43dp"
+            android:layout_marginBottom="14dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=">"
+            android:id="@+id/btnRight"
+            android:layout_below="@+id/btnUp"
+            android:layout_toRightOf="@+id/btnUp"
+            android:layout_toEndOf="@+id/btnUp" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="^"
+            android:id="@+id/btnUp"
+            android:layout_above="@+id/btnLeft"
+            android:layout_toRightOf="@+id/btnLeft"
+            android:layout_toEndOf="@+id/btnLeft" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="v"
+            android:id="@+id/btnDown"
+            android:layout_alignBottom="@+id/btnRight"
+            android:layout_toLeftOf="@+id/btnRight"
+            android:layout_toStartOf="@+id/btnRight" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:id="@+id/txtFeedback"
+            tools:text="feedback"
+            android:textColor="@color/white"
+            android:layout_marginTop="130dp"
+            android:layout_below="@+id/txtTime"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:id="@+id/txtTime"
+            android:textColor="@color/white"
+            tools:text="00:00:00"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:text="Enter Name"
+            android:ems="10"
+            android:id="@+id/etName"
+            android:background="@color/white"
+            android:layout_alignLeft="@+id/btnLeft"
+            android:layout_alignStart="@+id/btnLeft"
+            android:layout_toLeftOf="@+id/btnRight"
+            android:layout_toStartOf="@+id/btnRight"
+            android:visibility="invisible"
+            tools:visibility="visible"
+            android:layout_alignTop="@+id/btnAddName"
+            android:layout_alignBottom="@+id/btnAddName" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add"
+            android:id="@+id/btnAddName"
+            android:layout_marginBottom="22dp"
+            android:visibility="invisible"
+            tools:visibility="visible"
+            android:layout_above="@+id/btnUp"
+            android:layout_toRightOf="@+id/txtFeedback"
+            android:layout_toEndOf="@+id/txtFeedback" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
